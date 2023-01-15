@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="wrapper">
+
+  <header>
+    <!-- Image and text -->
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">
+    IA Transcriptora
+  </a>
+</nav>
+  </header>
+
+  <section class="main-controls">
+    <canvas class="visualizer" height="60px"></canvas>
+    <div id="buttons">
+      <button class="record">Grabar</button>
+      <button class="stop">Detener</button>
+    </div>
+  </section>
+
+  <section class="sound-clips">
+
+  </section>
+    <textarea class="transcription" readonly>{{ transcription }}</textarea>
+    <div class="container bg-light">
+    <div class="col-md-12 text-center">
+      <button onclick="descargarPDF()" class="btn btn-primary">Descargar Pdf</button>
+      <button onclick="descargarPDF()" class="btn btn-primary">Descargar Word</button>
+    </div>
+    </div>
+</div>
+<script src="../static/js/app.js"></script>
+
+{% endblock %}
